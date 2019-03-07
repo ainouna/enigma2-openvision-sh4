@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tuxbox-enigma 0.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-22 14:19+0330\n"
+"POT-Creation-Date: 2019-03-05 01:01+0330\n"
 "PO-Revision-Date: 2016-06-17 12:13+0800\n"
 "Last-Translator: nx111 <gdzdz@163.com>\n"
 "Language-Team: NEWBOLT\n"
@@ -1922,8 +1922,9 @@ msgstr "设置模式"
 msgid "Configuration..."
 msgstr "设置..."
 
-msgid "Configure DVB-ATSC"
-msgstr ""
+#, fuzzy
+msgid "Configure ATSC"
+msgstr "配置"
 
 #, fuzzy
 msgid "Configure DVB-C"
@@ -3004,9 +3005,6 @@ msgid_plural "Done - Installed, upgraded or removed %d packages (%s)"
 msgstr[0] ""
 msgstr[1] ""
 
-msgid "Down"
-msgstr ""
-
 msgid "Download plugins"
 msgstr ""
 
@@ -3253,6 +3251,10 @@ msgstr "英语"
 
 #, python-format
 msgid "Enigma (re)starts: %d\n"
+msgstr ""
+
+#, python-format
+msgid "Enigma debug level: %d\n"
 msgstr ""
 
 #, fuzzy
@@ -3709,6 +3711,10 @@ msgstr "安装失败"
 
 #, fuzzy
 msgid "Flash image"
+msgstr "安装失败"
+
+#, fuzzy
+msgid "Flash type: "
 msgstr "安装失败"
 
 #, fuzzy
@@ -4460,9 +4466,6 @@ msgid "Invalid directory selected: %s"
 msgstr "选择了无效目录: %s"
 
 msgid "Invalid location"
-msgstr ""
-
-msgid "Invalid reason"
 msgstr ""
 
 msgid "Invalid transponder data"
@@ -5547,6 +5550,9 @@ msgstr ""
 msgid "Normal"
 msgstr "格式化"
 
+msgid "Normal flash STB"
+msgstr ""
+
 msgid "Normal mode"
 msgstr ""
 
@@ -5894,14 +5900,6 @@ msgstr ""
 
 #. TRANSLATORS: (aspect ratio policy: black bars on left/right) in doubt, keep english term.
 msgid "Pillarbox"
-msgstr "原始大小"
-
-#, fuzzy
-msgid "Pillarbox/Just scale"
-msgstr "原始大小"
-
-#, fuzzy
-msgid "Pillarbox/Pan&Scan"
 msgstr "原始大小"
 
 msgid "Pilot"
@@ -6822,6 +6820,10 @@ msgstr "重启Enigma2"
 msgid "Restart enigma in debug mode"
 msgstr "重启Enigma2"
 
+#, fuzzy
+msgid "Restart enigma in standard mode"
+msgstr "重启Enigma2"
+
 msgid "Restart network"
 msgstr "重启网络"
 
@@ -7250,7 +7252,7 @@ msgstr ""
 msgid "Select 'FBC SCR' if this tuner will connect to a SCR (Unicable/JESS) device. For all other setups select 'FBC automatic'."
 msgstr ""
 
-msgid "Select 'Yes' when you want to configure this tuner for DVB-ATSC"
+msgid "Select 'Yes' when you want to configure this tuner for ATSC"
 msgstr ""
 
 msgid "Select 'Yes' when you want to configure this tuner for DVB-C"
@@ -7992,10 +7994,6 @@ msgstr ""
 msgid "Show red LED on VFD"
 msgstr ""
 
-#, fuzzy
-msgid "Show sattelites list"
-msgstr "卫星"
-
 msgid "Show screensaver"
 msgstr ""
 
@@ -8193,6 +8191,9 @@ msgid "Slow motion speeds"
 msgstr ""
 
 msgid "Small"
+msgstr ""
+
+msgid "Small flash STB"
 msgstr ""
 
 msgid "Small progress"
@@ -9614,9 +9615,6 @@ msgstr "不支持"
 #, fuzzy
 msgid "Unzipping Image"
 msgstr "下载"
-
-msgid "Up"
-msgstr ""
 
 msgid "Update"
 msgstr "更新"

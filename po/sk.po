@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: enigma2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-22 14:19+0330\n"
+"POT-Creation-Date: 2019-03-05 01:01+0330\n"
 "PO-Revision-Date: 2019-02-06 13:41+0100\n"
 "Last-Translator: Andrej Tobola <andrej.tobola@gmail.com>\n"
 "Language-Team: \n"
@@ -1955,8 +1955,9 @@ msgstr "Konfiguračný režim"
 msgid "Configuration..."
 msgstr "Konfigurácia..."
 
-msgid "Configure DVB-ATSC"
-msgstr ""
+#, fuzzy
+msgid "Configure ATSC"
+msgstr "Konfigurujem"
 
 #, fuzzy
 msgid "Configure DVB-C"
@@ -3032,9 +3033,6 @@ msgstr[0] "Hotovo - Nainštalovaný, aktualizovaný alebo odstránený %d balí�
 msgstr[1] "Hotovo - Nainštalové, aktualizované alebo odstránené %d balíčky (%s)"
 msgstr[2] "Hotovo - Nainštalovaných, aktualizovaných alebo odstránených %d balíčkov (%s)"
 
-msgid "Down"
-msgstr ""
-
 msgid "Download plugins"
 msgstr "Stiahnúť doplnky"
 
@@ -3276,6 +3274,10 @@ msgstr "Angličtina"
 #, python-format
 msgid "Enigma (re)starts: %d\n"
 msgstr "Počet (re)štartov Enigmy: %d\n"
+
+#, python-format
+msgid "Enigma debug level: %d\n"
+msgstr ""
 
 msgid "Enigma version: "
 msgstr "Verzia Enigmy: "
@@ -3744,6 +3746,10 @@ msgstr "Nahrať image"
 
 msgid "Flash image"
 msgstr "Nahranie softvéru"
+
+#, fuzzy
+msgid "Flash type: "
+msgstr "Nahrať image"
 
 msgid "Flashing Image"
 msgstr "Nahrať image"
@@ -4488,10 +4494,6 @@ msgid "Invalid directory selected: %s"
 msgstr "Zvolený neplatný adresár: %s"
 
 msgid "Invalid location"
-msgstr "Neplatné umiestnenie"
-
-#, fuzzy
-msgid "Invalid reason"
 msgstr "Neplatné umiestnenie"
 
 msgid "Invalid transponder data"
@@ -5566,6 +5568,10 @@ msgstr "Norfolkské ostrovy"
 msgid "Normal"
 msgstr "Normálny"
 
+#, fuzzy
+msgid "Normal flash STB"
+msgstr "Compact Flash"
+
 msgid "Normal mode"
 msgstr "Normálny mód"
 
@@ -5907,14 +5913,6 @@ msgstr "Prehrávač obrázkov"
 
 #. TRANSLATORS: (aspect ratio policy: black bars on left/right) in doubt, keep english term.
 msgid "Pillarbox"
-msgstr "Pillarbox"
-
-#, fuzzy
-msgid "Pillarbox/Just scale"
-msgstr "Len prispôsobiť"
-
-#, fuzzy
-msgid "Pillarbox/Pan&Scan"
 msgstr "Pillarbox"
 
 msgid "Pilot"
@@ -6822,6 +6820,10 @@ msgstr "Reštartovať Enigmu"
 msgid "Restart enigma in debug mode"
 msgstr "Reštartovať Enigmu v debug móde"
 
+#, fuzzy
+msgid "Restart enigma in standard mode"
+msgstr "Reštartovať Enigmu v debug móde"
+
 msgid "Restart network"
 msgstr "Reštartovať sieť"
 
@@ -7249,7 +7251,7 @@ msgstr "Vyberte 'A' alebo 'B' ak to váš anténny systém vyžaduje, inak zvolt
 msgid "Select 'FBC SCR' if this tuner will connect to a SCR (Unicable/JESS) device. For all other setups select 'FBC automatic'."
 msgstr "Vyberte 'FBC SCR' ak sa tento tuner pripojí na SCR (Unicable/JESS) zariadenie. Pre všetky ostatné nastavenia vyberte 'Automatický FBC'."
 
-msgid "Select 'Yes' when you want to configure this tuner for DVB-ATSC"
+msgid "Select 'Yes' when you want to configure this tuner for ATSC"
 msgstr ""
 
 msgid "Select 'Yes' when you want to configure this tuner for DVB-C"
@@ -7984,10 +7986,6 @@ msgstr "Zobraziť indikátor nahrávania"
 msgid "Show red LED on VFD"
 msgstr ""
 
-#, fuzzy
-msgid "Show sattelites list"
-msgstr "Zobraziť zoznam služieb"
-
 msgid "Show screensaver"
 msgstr "Zobraziť šetrič obrazovky"
 
@@ -8185,6 +8183,9 @@ msgstr "Rýchlosti spomalenia prehrávania"
 
 msgid "Small"
 msgstr "Malé"
+
+msgid "Small flash STB"
+msgstr ""
 
 msgid "Small progress"
 msgstr "Malý pokrok"
@@ -9643,9 +9644,6 @@ msgstr "Nepodporované"
 
 msgid "Unzipping Image"
 msgstr "Rozbaľuje sa image"
-
-msgid "Up"
-msgstr ""
 
 msgid "Update"
 msgstr "Aktualizovať"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tuxbox-enigma 0.0.1-En-Th\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-22 14:19+0330\n"
+"POT-Creation-Date: 2019-03-05 01:01+0330\n"
 "PO-Revision-Date: 2010-04-08 18:13+0700\n"
 "Last-Translator: Tony - Thaidreambox\n"
 "Language-Team: Tony @ Thai Dreambox <tonyboyth@gmail.com>\n"
@@ -1968,8 +1968,9 @@ msgstr "โหมดการตั้งค่า"
 msgid "Configuration..."
 msgstr "ตั้งค่าเครือข่าย..."
 
-msgid "Configure DVB-ATSC"
-msgstr ""
+#, fuzzy
+msgid "Configure ATSC"
+msgstr "กำลังตั้งค่า"
 
 #, fuzzy
 msgid "Configure DVB-C"
@@ -3090,9 +3091,6 @@ msgid_plural "Done - Installed, upgraded or removed %d packages (%s)"
 msgstr[0] "เสร็จแล้ว - ติดตั้งปรับปรุงหรือลบ %d รายการ พบข้อผิดพลาด %d รายการ"
 msgstr[1] "เสร็จแล้ว - ติดตั้งปรับปรุงหรือลบ %d รายการ พบข้อผิดพลาด %d รายการ"
 
-msgid "Down"
-msgstr ""
-
 #, fuzzy
 msgid "Download plugins"
 msgstr "ดาวน์โหลด Plugins"
@@ -3343,6 +3341,10 @@ msgstr "ภาษาอังกฤษ"
 
 #, python-format
 msgid "Enigma (re)starts: %d\n"
+msgstr ""
+
+#, python-format
+msgid "Enigma debug level: %d\n"
 msgstr ""
 
 #, fuzzy
@@ -3811,6 +3813,10 @@ msgstr "แฟรช"
 
 #, fuzzy
 msgid "Flash image"
+msgstr "แฟรช"
+
+#, fuzzy
+msgid "Flash type: "
 msgstr "แฟรช"
 
 #, fuzzy
@@ -4587,10 +4593,6 @@ msgstr "โฟล์เดอร์นี้: %s ไม่ถูกต้อง"
 
 #, fuzzy
 msgid "Invalid location"
-msgstr "ปลายทางไม่ถูกต้อง"
-
-#, fuzzy
-msgid "Invalid reason"
 msgstr "ปลายทางไม่ถูกต้อง"
 
 msgid "Invalid transponder data"
@@ -5715,6 +5717,10 @@ msgstr ""
 msgid "Normal"
 msgstr "ฟอร์แมท"
 
+#, fuzzy
+msgid "Normal flash STB"
+msgstr "Compact Flash"
+
 msgid "Normal mode"
 msgstr ""
 
@@ -6077,14 +6083,6 @@ msgstr "ดูภาพ"
 
 #. TRANSLATORS: (aspect ratio policy: black bars on left/right) in doubt, keep english term.
 msgid "Pillarbox"
-msgstr "Pillarbox"
-
-#, fuzzy
-msgid "Pillarbox/Just scale"
-msgstr "ขยายเต็มจอ"
-
-#, fuzzy
-msgid "Pillarbox/Pan&Scan"
 msgstr "Pillarbox"
 
 msgid "Pilot"
@@ -7025,6 +7023,9 @@ msgstr ""
 msgid "Restart enigma in debug mode"
 msgstr ""
 
+msgid "Restart enigma in standard mode"
+msgstr ""
+
 msgid "Restart network"
 msgstr "เริ่มการทำงานเครือข่ายใหม่"
 
@@ -7465,7 +7466,7 @@ msgstr ""
 msgid "Select 'FBC SCR' if this tuner will connect to a SCR (Unicable/JESS) device. For all other setups select 'FBC automatic'."
 msgstr ""
 
-msgid "Select 'Yes' when you want to configure this tuner for DVB-ATSC"
+msgid "Select 'Yes' when you want to configure this tuner for ATSC"
 msgstr ""
 
 msgid "Select 'Yes' when you want to configure this tuner for DVB-C"
@@ -8243,10 +8244,6 @@ msgstr ""
 msgid "Show red LED on VFD"
 msgstr ""
 
-#, fuzzy
-msgid "Show sattelites list"
-msgstr "ดาวเทียม"
-
 msgid "Show screensaver"
 msgstr ""
 
@@ -8454,6 +8451,9 @@ msgid "Slow motion speeds"
 msgstr "ระดับของความช้า"
 
 msgid "Small"
+msgstr ""
+
+msgid "Small flash STB"
 msgstr ""
 
 #, fuzzy
@@ -9936,9 +9936,6 @@ msgstr "ไม่รองรับ"
 #, fuzzy
 msgid "Unzipping Image"
 msgstr "กำลังดาวน์โหลด"
-
-msgid "Up"
-msgstr ""
 
 msgid "Update"
 msgstr "ปรุบปรุง"

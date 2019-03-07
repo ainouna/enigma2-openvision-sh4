@@ -1,7 +1,3 @@
-/*
-  Interface to the Dreambox dm800/dm8000 proprietary accel interface.
-*/
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <fcntl.h>
@@ -15,7 +11,6 @@
 #include <lib/base/ebase.h>
 
 static int fb_fd;
-// static int exec_list(void);
 
 int stmfb_accel_init(void)
 {
@@ -70,6 +65,5 @@ void stmfb_accel_fill(
 		int dst_addr, int dst_width, int dst_height, int dst_stride,
 		int x, int y, int width, int height,
 		unsigned long color)
-{
-//	printf("unimplemented bcm_accel_fill\n");
+{	
 }

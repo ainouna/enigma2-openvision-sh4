@@ -2,6 +2,7 @@
 import sys, os, time
 import re
 from Tools.HardwareInfo import HardwareInfo
+from Components.SystemInfo import SystemInfo
 
 def getVersionString():
 	return getImageVersionString()
@@ -123,11 +124,17 @@ def getCPUInfoString():
 	except:
 		return _("undefined")
 
+def getFlashType():
+	if SystemInfo["SmallFlash"]:
+		return _("Small flash STB")
+	else:
+		return _("Normal flash STB")
+
 def getDriverInstalledDate():
 	try:
 		from glob import glob
 		try:
-			driver = [x.split("Version:") for x in open(glob("/var/lib/opkg/info/fulan-dvb-modules.control")[0], "r") if x.startswith("Version:")][0]
+			driver = [x.split("Version:") for x in open(glob("/var/lib/opkg/info/sh4-dvb-modules.control")[0], "r") if x.startswith("Version:")][0]
 			return  "%s" % driver[1].replace("\n","")
 		except:
 			try:

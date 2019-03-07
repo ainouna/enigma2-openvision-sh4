@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: enigma2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-22 14:19+0330\n"
+"POT-Creation-Date: 2019-03-05 01:01+0330\n"
 "PO-Revision-Date: 2018-05-02 18:32+0300\n"
 "Last-Translator: Dimitrij <Dima-73@inbox.lv>\n"
 "Language-Team: openPLi Dimitrij\n"
@@ -1954,8 +1954,9 @@ msgstr "Режим конфигурации"
 msgid "Configuration..."
 msgstr "Конфигурация..."
 
-msgid "Configure DVB-ATSC"
-msgstr ""
+#, fuzzy
+msgid "Configure ATSC"
+msgstr "Настройки"
 
 #, fuzzy
 msgid "Configure DVB-C"
@@ -3031,9 +3032,6 @@ msgstr[0] "Выполнено - Установлен, обновлен или у
 msgstr[1] "Выполнено - Установлено, обновлено или удалено %d пакета (%s)"
 msgstr[2] "Выполнено - Установлено, обновлено или удалено %d пакетов (%s)"
 
-msgid "Down"
-msgstr ""
-
 msgid "Download plugins"
 msgstr "Загрузка плагинов"
 
@@ -3275,6 +3273,10 @@ msgstr "Английский"
 #, python-format
 msgid "Enigma (re)starts: %d\n"
 msgstr "Энигма (ре)стартов: %d\n"
+
+#, python-format
+msgid "Enigma debug level: %d\n"
+msgstr ""
 
 msgid "Enigma version: "
 msgstr "Версия энигмы: "
@@ -3742,6 +3744,10 @@ msgid "Flash Image"
 msgstr "Прошивка имиджа"
 
 msgid "Flash image"
+msgstr "Прошивка имиджа"
+
+#, fuzzy
+msgid "Flash type: "
 msgstr "Прошивка имиджа"
 
 msgid "Flashing Image"
@@ -4489,10 +4495,6 @@ msgid "Invalid directory selected: %s"
 msgstr "Выбран неправильный каталог: %s"
 
 msgid "Invalid location"
-msgstr "Неправильное расположение"
-
-#, fuzzy
-msgid "Invalid reason"
 msgstr "Неправильное расположение"
 
 msgid "Invalid transponder data"
@@ -5565,6 +5567,10 @@ msgstr "Norfolk Island"
 msgid "Normal"
 msgstr "Нормальный"
 
+#, fuzzy
+msgid "Normal flash STB"
+msgstr "Компакт-флэш"
+
 msgid "Normal mode"
 msgstr "Нормальный режим"
 
@@ -5908,14 +5914,6 @@ msgstr "Проигрыватель фото"
 
 #. TRANSLATORS: (aspect ratio policy: black bars on left/right) in doubt, keep english term.
 msgid "Pillarbox"
-msgstr "Pillarbox"
-
-#, fuzzy
-msgid "Pillarbox/Just scale"
-msgstr "Только масштаб"
-
-#, fuzzy
-msgid "Pillarbox/Pan&Scan"
 msgstr "Pillarbox"
 
 msgid "Pilot"
@@ -6827,6 +6825,10 @@ msgstr "Рестарт GUI"
 msgid "Restart enigma in debug mode"
 msgstr "Рестарт GUI для режима отладки"
 
+#, fuzzy
+msgid "Restart enigma in standard mode"
+msgstr "Рестарт GUI для режима отладки"
+
 msgid "Restart network"
 msgstr "Рестарт сети"
 
@@ -7254,7 +7256,7 @@ msgstr "Выберите 'A' или 'B', если Ваша система тре
 msgid "Select 'FBC SCR' if this tuner will connect to a SCR (Unicable/JESS) device. For all other setups select 'FBC automatic'."
 msgstr "Выберите 'FBC SCR' ,если Ваш тюнер испрользует устройство SCR (Unicable/JESS). В остальных случаях используйте 'FBC автоматически'."
 
-msgid "Select 'Yes' when you want to configure this tuner for DVB-ATSC"
+msgid "Select 'Yes' when you want to configure this tuner for ATSC"
 msgstr ""
 
 msgid "Select 'Yes' when you want to configure this tuner for DVB-C"
@@ -7988,10 +7990,6 @@ msgstr "Показать индикатор записи"
 msgid "Show red LED on VFD"
 msgstr ""
 
-#, fuzzy
-msgid "Show sattelites list"
-msgstr "Показать список сервисов"
-
 msgid "Show screensaver"
 msgstr "Запустить хранитель экрана через"
 
@@ -8189,6 +8187,9 @@ msgstr "Низкая скорость движения"
 
 msgid "Small"
 msgstr "Маленький"
+
+msgid "Small flash STB"
+msgstr ""
 
 msgid "Small progress"
 msgstr "Маленький прогресс"
@@ -9642,9 +9643,6 @@ msgstr "Не поддерживается"
 
 msgid "Unzipping Image"
 msgstr "Распаковка имиджа"
-
-msgid "Up"
-msgstr ""
 
 msgid "Update"
 msgstr "Обновление"

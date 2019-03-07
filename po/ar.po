@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: enigma2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-22 14:19+0330\n"
+"POT-Creation-Date: 2019-03-05 01:01+0330\n"
 "PO-Revision-Date: 2018-12-17 02:51+0200\n"
 "Last-Translator: Hazem <moustafagamal@hotmail.com>\n"
 "Language-Team: Arabic <moustafagamal@hotmail.com>\n"
@@ -2080,8 +2080,9 @@ msgstr "وضع الإعداد"
 msgid "Configuration..."
 msgstr "الإعداد..."
 
-msgid "Configure DVB-ATSC"
-msgstr ""
+#, fuzzy
+msgid "Configure ATSC"
+msgstr "جاري الإعداد"
 
 #, fuzzy
 msgid "Configure DVB-C"
@@ -3196,9 +3197,6 @@ msgstr[3] "تم - تثبيت ، تحديث أو حذف %d الرزم والاخ�
 msgstr[4] "تم - تثبيت ، تحديث أو حذف %d الرزم والاخطاء%d "
 msgstr[5] "تم - تثبيت ، تحديث أو حذف %d الرزم والاخطاء%d "
 
-msgid "Down"
-msgstr ""
-
 msgid "Download plugins"
 msgstr "تحميل إضافات"
 
@@ -3461,6 +3459,10 @@ msgstr "إنجليزي"
 
 #, python-format
 msgid "Enigma (re)starts: %d\n"
+msgstr ""
+
+#, python-format
+msgid "Enigma debug level: %d\n"
 msgstr ""
 
 #
@@ -3940,6 +3942,10 @@ msgid "Flash Image"
 msgstr "تنصيب صورة"
 
 msgid "Flash image"
+msgstr "تنصيب صورة"
+
+#, fuzzy
+msgid "Flash type: "
 msgstr "تنصيب صورة"
 
 msgid "Flashing Image"
@@ -4731,10 +4737,6 @@ msgstr "تم إختياردليل غير صالح %s"
 
 #, fuzzy
 msgid "Invalid location"
-msgstr "موقع غير صالح"
-
-#, fuzzy
-msgid "Invalid reason"
 msgstr "موقع غير صالح"
 
 msgid "Invalid transponder data"
@@ -5938,6 +5940,10 @@ msgstr ""
 msgid "Normal"
 msgstr "عادي"
 
+#, fuzzy
+msgid "Normal flash STB"
+msgstr "فلاش مدمج"
+
 msgid "Normal mode"
 msgstr ""
 
@@ -6308,14 +6314,6 @@ msgstr "عارض الصور"
 
 #. TRANSLATORS: (aspect ratio policy: black bars on left/right) in doubt, keep english term.
 msgid "Pillarbox"
-msgstr "عمود مربع"
-
-#, fuzzy
-msgid "Pillarbox/Just scale"
-msgstr "عمود مربع"
-
-#, fuzzy
-msgid "Pillarbox/Pan&Scan"
 msgstr "عمود مربع"
 
 #
@@ -7286,6 +7284,10 @@ msgstr "اعادة تشغيل انيجما"
 msgid "Restart enigma in debug mode"
 msgstr "اعادة تشغيل انيجما في وضع debug"
 
+#, fuzzy
+msgid "Restart enigma in standard mode"
+msgstr "اعادة تشغيل انيجما في وضع debug"
+
 msgid "Restart network"
 msgstr "إعادة تشغيل الشبكة"
 
@@ -7755,7 +7757,7 @@ msgstr ""
 msgid "Select 'FBC SCR' if this tuner will connect to a SCR (Unicable/JESS) device. For all other setups select 'FBC automatic'."
 msgstr ""
 
-msgid "Select 'Yes' when you want to configure this tuner for DVB-ATSC"
+msgid "Select 'Yes' when you want to configure this tuner for ATSC"
 msgstr ""
 
 msgid "Select 'Yes' when you want to configure this tuner for DVB-C"
@@ -8545,11 +8547,6 @@ msgstr ""
 msgid "Show red LED on VFD"
 msgstr ""
 
-#
-#, fuzzy
-msgid "Show sattelites list"
-msgstr "أقمار صناعية"
-
 msgid "Show screensaver"
 msgstr ""
 
@@ -8771,6 +8768,9 @@ msgid "Slow motion speeds"
 msgstr "سرعات العرض البطئ"
 
 msgid "Small"
+msgstr ""
+
+msgid "Small flash STB"
 msgstr ""
 
 #
@@ -10346,9 +10346,6 @@ msgstr "غير مدعم"
 
 msgid "Unzipping Image"
 msgstr "جاري فك ضغط الصورة"
-
-msgid "Up"
-msgstr ""
 
 #
 msgid "Update"

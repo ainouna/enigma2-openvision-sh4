@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Project Slovenia\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-22 14:19+0330\n"
+"POT-Creation-Date: 2019-03-05 01:01+0330\n"
 "PO-Revision-Date: 2015-08-30 09:00+0200\n"
 "Last-Translator: Taykun345 <support@satnigmo.com>\n"
 "Language-Team: Satnigmo <support@satnigmo.com>\n"
@@ -2238,8 +2238,10 @@ msgstr "Nastavitveni način: "
 msgid "Configuration..."
 msgstr "Dodatne nastavitve"
 
-msgid "Configure DVB-ATSC"
-msgstr ""
+#
+#, fuzzy
+msgid "Configure ATSC"
+msgstr "Nastavljam..."
 
 #
 #, fuzzy
@@ -3471,9 +3473,6 @@ msgstr[1] "Končano - nameščena, nadgrajena ali izbrisana sta bila %d paketa (
 msgstr[2] "Končano - nameščeni, nadgrajeni ali izbrisani so bili %d paketi (%s)."
 msgstr[3] "Končano - nameščenih, nadgrajenih ali izbrisanih je bilo %d paketov (%s)."
 
-msgid "Down"
-msgstr ""
-
 #
 msgid "Download plugins"
 msgstr "Prenos"
@@ -3769,6 +3768,10 @@ msgstr "Angleško"
 #, python-format
 msgid "Enigma (re)starts: %d\n"
 msgstr "Št. ponovnih zagonov: %d\n"
+
+#, python-format
+msgid "Enigma debug level: %d\n"
+msgstr ""
 
 #, fuzzy
 msgid "Enigma version: "
@@ -4289,6 +4292,11 @@ msgstr "Nadgradi"
 #
 #, fuzzy
 msgid "Flash image"
+msgstr "Nadgradi"
+
+#
+#, fuzzy
+msgid "Flash type: "
 msgstr "Nadgradi"
 
 #
@@ -5142,11 +5150,6 @@ msgstr "Izbrana neveljavna mapa: %s"
 
 #
 msgid "Invalid location"
-msgstr "Neveljavna lokacija"
-
-#
-#, fuzzy
-msgid "Invalid reason"
 msgstr "Neveljavna lokacija"
 
 #
@@ -6399,6 +6402,11 @@ msgstr ""
 msgid "Normal"
 msgstr "normalno"
 
+#
+#, fuzzy
+msgid "Normal flash STB"
+msgstr "Compact Flash"
+
 msgid "Normal mode"
 msgstr "Normalni način"
 
@@ -6787,16 +6795,6 @@ msgstr "Prikazovalnik slik"
 #
 #. TRANSLATORS: (aspect ratio policy: black bars on left/right) in doubt, keep english term.
 msgid "Pillarbox"
-msgstr "Pillarbox"
-
-#
-#, fuzzy
-msgid "Pillarbox/Just scale"
-msgstr "Samodejno"
-
-#
-#, fuzzy
-msgid "Pillarbox/Pan&Scan"
 msgstr "Pillarbox"
 
 #
@@ -7899,6 +7897,11 @@ msgid "Restart enigma in debug mode"
 msgstr "Ponovni zagon Enigme"
 
 #
+#, fuzzy
+msgid "Restart enigma in standard mode"
+msgstr "Ponovni zagon Enigme"
+
+#
 msgid "Restart network"
 msgstr "Ponovni zagon omrežja"
 
@@ -8400,7 +8403,7 @@ msgstr ""
 msgid "Select 'FBC SCR' if this tuner will connect to a SCR (Unicable/JESS) device. For all other setups select 'FBC automatic'."
 msgstr ""
 
-msgid "Select 'Yes' when you want to configure this tuner for DVB-ATSC"
+msgid "Select 'Yes' when you want to configure this tuner for ATSC"
 msgstr ""
 
 msgid "Select 'Yes' when you want to configure this tuner for DVB-C"
@@ -9257,10 +9260,6 @@ msgstr "Prikaz indikatorja snemanja"
 msgid "Show red LED on VFD"
 msgstr ""
 
-#, fuzzy
-msgid "Show sattelites list"
-msgstr "Prikaz seznama kanalov"
-
 msgid "Show screensaver"
 msgstr "Prikaz ohranjevalnika zaslona"
 
@@ -9498,6 +9497,9 @@ msgid "Slow motion speeds"
 msgstr "Hitrosti počasnega predvajanja"
 
 msgid "Small"
+msgstr ""
+
+msgid "Small flash STB"
 msgstr ""
 
 #
@@ -11162,9 +11164,6 @@ msgstr "Nepodprto"
 #, fuzzy
 msgid "Unzipping Image"
 msgstr "Nalaganje..."
-
-msgid "Up"
-msgstr ""
 
 #
 msgid "Update"

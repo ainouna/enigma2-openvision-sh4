@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: enigma2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-22 14:19+0330\n"
+"POT-Creation-Date: 2019-03-05 01:01+0330\n"
 "PO-Revision-Date: 2011-05-07 12:23+0200\n"
 "Last-Translator: Baldur <bsveinsson@gmail.com>\n"
 "Language-Team: Polar Team/LT Team <baddi@oreind.is>\n"
@@ -2086,8 +2086,9 @@ msgstr "Stillinga hamur"
 msgid "Configuration..."
 msgstr "Stilling nettengingar..."
 
-msgid "Configure DVB-ATSC"
-msgstr ""
+#, fuzzy
+msgid "Configure ATSC"
+msgstr "Stilli"
 
 #, fuzzy
 msgid "Configure DVB-C"
@@ -3286,9 +3287,6 @@ msgid_plural "Done - Installed, upgraded or removed %d packages (%s)"
 msgstr[0] "Búin, setti inn, uppfærði eða tót út %d pakka með %d villum"
 msgstr[1] "Búin, setti inn, uppfærði eða tót út %d pakka með %d villum"
 
-msgid "Down"
-msgstr ""
-
 #, fuzzy
 msgid "Download plugins"
 msgstr "Hala niður íforritum"
@@ -3563,6 +3561,10 @@ msgstr "Enska"
 
 #, python-format
 msgid "Enigma (re)starts: %d\n"
+msgstr ""
+
+#, python-format
+msgid "Enigma debug level: %d\n"
 msgstr ""
 
 #
@@ -4069,6 +4071,11 @@ msgstr "Forritun"
 #
 #, fuzzy
 msgid "Flash image"
+msgstr "Forritun"
+
+#
+#, fuzzy
+msgid "Flash type: "
 msgstr "Forritun"
 
 #
@@ -4917,11 +4924,6 @@ msgstr "Ógild mappa valin: %s"
 #
 #, fuzzy
 msgid "Invalid location"
-msgstr "Ógildur staður"
-
-#
-#, fuzzy
-msgid "Invalid reason"
 msgstr "Ógildur staður"
 
 msgid "Invalid transponder data"
@@ -6193,6 +6195,10 @@ msgstr ""
 msgid "Normal"
 msgstr "Forma"
 
+#, fuzzy
+msgid "Normal flash STB"
+msgstr "Compact Flash"
+
 msgid "Normal mode"
 msgstr ""
 
@@ -6589,16 +6595,6 @@ msgstr "Mynd spilari"
 #
 #. TRANSLATORS: (aspect ratio policy: black bars on left/right) in doubt, keep english term.
 msgid "Pillarbox"
-msgstr "Pillarbox"
-
-#
-#, fuzzy
-msgid "Pillarbox/Just scale"
-msgstr "Bara full mynd"
-
-#
-#, fuzzy
-msgid "Pillarbox/Pan&Scan"
 msgstr "Pillarbox"
 
 #
@@ -7675,6 +7671,9 @@ msgstr ""
 msgid "Restart enigma in debug mode"
 msgstr ""
 
+msgid "Restart enigma in standard mode"
+msgstr ""
+
 #
 msgid "Restart network"
 msgstr "Endurræsi netkort"
@@ -8169,7 +8168,7 @@ msgstr ""
 msgid "Select 'FBC SCR' if this tuner will connect to a SCR (Unicable/JESS) device. For all other setups select 'FBC automatic'."
 msgstr ""
 
-msgid "Select 'Yes' when you want to configure this tuner for DVB-ATSC"
+msgid "Select 'Yes' when you want to configure this tuner for ATSC"
 msgstr ""
 
 msgid "Select 'Yes' when you want to configure this tuner for DVB-C"
@@ -9022,11 +9021,6 @@ msgstr ""
 msgid "Show red LED on VFD"
 msgstr ""
 
-#
-#, fuzzy
-msgid "Show sattelites list"
-msgstr "Gervihnettir"
-
 msgid "Show screensaver"
 msgstr ""
 
@@ -9261,6 +9255,9 @@ msgid "Slow motion speeds"
 msgstr "Hraði hægspilunar"
 
 msgid "Small"
+msgstr ""
+
+msgid "Small flash STB"
 msgstr ""
 
 #
@@ -10920,9 +10917,6 @@ msgstr "Ekki stutt"
 #, fuzzy
 msgid "Unzipping Image"
 msgstr "Hleð niður"
-
-msgid "Up"
-msgstr ""
 
 #
 msgid "Update"

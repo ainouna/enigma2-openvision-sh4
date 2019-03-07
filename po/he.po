@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tuxbox-enigma 0.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-22 14:19+0330\n"
+"POT-Creation-Date: 2019-03-05 01:01+0330\n"
 "PO-Revision-Date: 2012-03-08 10:40+0330\n"
 "Last-Translator: \n"
 "Language-Team: Arabic <moustafagamal@hotmail.com>\n"
@@ -2069,8 +2069,9 @@ msgstr "תצורת הגדרה"
 msgid "Configuration..."
 msgstr "...הגדרת רשת"
 
-msgid "Configure DVB-ATSC"
-msgstr ""
+#, fuzzy
+msgid "Configure ATSC"
+msgstr "מגדיר"
 
 #, fuzzy
 msgid "Configure DVB-C"
@@ -3218,9 +3219,6 @@ msgid_plural "Done - Installed, upgraded or removed %d packages (%s)"
 msgstr[0] "תקלות %d חבילות עם %d בוצע - הותקנו, עודכנו או הוסרו"
 msgstr[1] "תקלות %d חבילות עם %d בוצע - הותקנו, עודכנו או הוסרו"
 
-msgid "Down"
-msgstr ""
-
 #, fuzzy
 msgid "Download plugins"
 msgstr "הורד פלאגינים"
@@ -3488,6 +3486,10 @@ msgstr "אנגלית"
 
 #, python-format
 msgid "Enigma (re)starts: %d\n"
+msgstr ""
+
+#, python-format
+msgid "Enigma debug level: %d\n"
 msgstr ""
 
 #
@@ -3969,6 +3971,10 @@ msgstr "Flash"
 
 #, fuzzy
 msgid "Flash image"
+msgstr "Flash"
+
+#, fuzzy
+msgid "Flash type: "
 msgstr "Flash"
 
 #, fuzzy
@@ -4781,10 +4787,6 @@ msgstr "%s :נבחרה תיקיה שגויה"
 
 #, fuzzy
 msgid "Invalid location"
-msgstr "מיקום שגוי"
-
-#, fuzzy
-msgid "Invalid reason"
 msgstr "מיקום שגוי"
 
 msgid "Invalid transponder data"
@@ -5993,6 +5995,10 @@ msgstr ""
 msgid "Normal"
 msgstr "פורמט"
 
+#, fuzzy
+msgid "Normal flash STB"
+msgstr "Compact Flash"
+
 msgid "Normal mode"
 msgstr ""
 
@@ -6372,14 +6378,6 @@ msgstr "נגן התמונות"
 
 #. TRANSLATORS: (aspect ratio policy: black bars on left/right) in doubt, keep english term.
 msgid "Pillarbox"
-msgstr "Pillarbox"
-
-#, fuzzy
-msgid "Pillarbox/Just scale"
-msgstr "Pillarbox"
-
-#, fuzzy
-msgid "Pillarbox/Pan&Scan"
 msgstr "Pillarbox"
 
 #
@@ -7372,6 +7370,9 @@ msgstr ""
 msgid "Restart enigma in debug mode"
 msgstr ""
 
+msgid "Restart enigma in standard mode"
+msgstr ""
+
 msgid "Restart network"
 msgstr "איתחול רשת"
 
@@ -7836,7 +7837,7 @@ msgstr ""
 msgid "Select 'FBC SCR' if this tuner will connect to a SCR (Unicable/JESS) device. For all other setups select 'FBC automatic'."
 msgstr ""
 
-msgid "Select 'Yes' when you want to configure this tuner for DVB-ATSC"
+msgid "Select 'Yes' when you want to configure this tuner for ATSC"
 msgstr ""
 
 msgid "Select 'Yes' when you want to configure this tuner for DVB-C"
@@ -8656,11 +8657,6 @@ msgstr ""
 msgid "Show red LED on VFD"
 msgstr ""
 
-#
-#, fuzzy
-msgid "Show sattelites list"
-msgstr "לוויינים"
-
 msgid "Show screensaver"
 msgstr ""
 
@@ -8887,6 +8883,9 @@ msgid "Slow motion speeds"
 msgstr "Slow Motion speeds"
 
 msgid "Small"
+msgstr ""
+
+msgid "Small flash STB"
 msgstr ""
 
 #
@@ -10477,9 +10476,6 @@ msgstr "לא נתמך"
 #, fuzzy
 msgid "Unzipping Image"
 msgstr "מוריד"
-
-msgid "Up"
-msgstr ""
 
 #
 msgid "Update"

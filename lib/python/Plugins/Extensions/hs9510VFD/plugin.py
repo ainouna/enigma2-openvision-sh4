@@ -2,7 +2,7 @@
 from Plugins.Plugin import PluginDescriptor
 from ServiceReference import ServiceReference
 from Components.ServiceList import ServiceList
-from enigma import iPlayableService, iServiceInformation, iTimeshiftServicePtr, iRecordableService, eTimer, evfd, eDVBVolumecontrol, iFrontendInformation
+from enigma import iPlayableService, iServiceInformation, iTimeshiftServicePtr, iRecordableService, eTimer, evfd, eDVBVolumecontrol, iFrontendInformation, getBoxType
 from time import localtime, strftime, sleep
 from Components.ServiceEventTracker import ServiceEventTracker
 from Components.Console import Console
@@ -13,11 +13,9 @@ from Components.config import *
 from Components.ConfigList import ConfigList, ConfigListScreen
 from Components.Language import language
 from Components.Sources.StaticText import StaticText
-from Tools.HardwareInfo import HardwareInfo
 from Screens.Screen import Screen
 import gettext
 #Version 140114.1
-stb = HardwareInfo().get_device_name()
 lang = language.getLanguage()
 environ['LANGUAGE'] = lang[:2]
 gettext.bindtextdomain('enigma2', resolveFilename(SCOPE_LANGUAGE))
@@ -45,7 +43,7 @@ except:
 DisplayTypevfd = DisplayType
 
 if DisplayTypevfd is None:
-	if stb.lower() == 'octagon1008':
+	if getBoxType() == "octagon1008":
 		DisplayType = 7
 	else:
 		DisplayType = None

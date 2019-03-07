@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: enigma2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-22 14:19+0330\n"
+"POT-Creation-Date: 2019-03-05 01:01+0330\n"
 "PO-Revision-Date: 2018-10-22T21:44:30+02:00\n"
 "Last-Translator: daddelfalk <OpenPLi>\n"
 "Language-Team: Sfteam  angelo2807@hotmail.com\n"
@@ -1944,8 +1944,9 @@ msgstr "Konfigurationsmodus"
 msgid "Configuration..."
 msgstr "Konfiguration…"
 
-msgid "Configure DVB-ATSC"
-msgstr ""
+#, fuzzy
+msgid "Configure ATSC"
+msgstr "Konfiguriere"
 
 #, fuzzy
 msgid "Configure DVB-C"
@@ -3016,9 +3017,6 @@ msgid_plural "Done - Installed, upgraded or removed %d packages (%s)"
 msgstr[0] "Abgeschlossen - %d Paket installiert, aktualisiert oder entfernt (%s)"
 msgstr[1] "Abgeschlossen - %d Pakete installiert, aktualisiert oder entfernt (%s)"
 
-msgid "Down"
-msgstr ""
-
 msgid "Download plugins"
 msgstr "Plugins herunterladen"
 
@@ -3260,6 +3258,10 @@ msgstr "Englisch"
 #, python-format
 msgid "Enigma (re)starts: %d\n"
 msgstr "Benutzeroberfläche (Enigma) startet neu: %d\n"
+
+#, python-format
+msgid "Enigma debug level: %d\n"
+msgstr ""
 
 msgid "Enigma version: "
 msgstr "Enigma-version:"
@@ -3727,6 +3729,10 @@ msgid "Flash Image"
 msgstr "Flashe Image"
 
 msgid "Flash image"
+msgstr "Flashe Image"
+
+#, fuzzy
+msgid "Flash type: "
 msgstr "Flashe Image"
 
 msgid "Flashing Image"
@@ -4472,10 +4478,6 @@ msgid "Invalid directory selected: %s"
 msgstr "Ungültiges Verzeichnis ausgewählt: %s"
 
 msgid "Invalid location"
-msgstr "Fehlerhafter Ort"
-
-#, fuzzy
-msgid "Invalid reason"
 msgstr "Fehlerhafter Ort"
 
 msgid "Invalid transponder data"
@@ -5551,6 +5553,10 @@ msgstr "Norfolkinsel"
 msgid "Normal"
 msgstr "Normal"
 
+#, fuzzy
+msgid "Normal flash STB"
+msgstr "Compact Flash"
+
 msgid "Normal mode"
 msgstr "Normal Modus"
 
@@ -5892,14 +5898,6 @@ msgstr "Bildbetrachter"
 
 #. TRANSLATORS: (aspect ratio policy: black bars on left/right) in doubt, keep english term.
 msgid "Pillarbox"
-msgstr "Pillarbox"
-
-#, fuzzy
-msgid "Pillarbox/Just scale"
-msgstr "Nur Skalieren"
-
-#, fuzzy
-msgid "Pillarbox/Pan&Scan"
 msgstr "Pillarbox"
 
 msgid "Pilot"
@@ -6813,6 +6811,10 @@ msgstr "Benutzeroberfläche (Enigma) neu starten"
 msgid "Restart enigma in debug mode"
 msgstr "Benutzeroberfläche (Enigma) im Debugmodus starten"
 
+#, fuzzy
+msgid "Restart enigma in standard mode"
+msgstr "Benutzeroberfläche (Enigma) im Debugmodus starten"
+
 msgid "Restart network"
 msgstr "Netzwerk neu starten"
 
@@ -7237,7 +7239,7 @@ msgstr "Wählen Sie “A” oder “B”, wenn Ihr Antennensystem dies erfordert
 msgid "Select 'FBC SCR' if this tuner will connect to a SCR (Unicable/JESS) device. For all other setups select 'FBC automatic'."
 msgstr "Wählen Sie “FBC SCR”, wenn dieser Tuner ein Unicable/SCR-Gerät verwendet. Für alle anderen Setups wählen Sie “FBC automatisch”."
 
-msgid "Select 'Yes' when you want to configure this tuner for DVB-ATSC"
+msgid "Select 'Yes' when you want to configure this tuner for ATSC"
 msgstr ""
 
 msgid "Select 'Yes' when you want to configure this tuner for DVB-C"
@@ -7971,10 +7973,6 @@ msgstr "Aufnahme-Symbole anzeigen"
 msgid "Show red LED on VFD"
 msgstr ""
 
-#, fuzzy
-msgid "Show sattelites list"
-msgstr "Senderliste anzeigen"
-
 msgid "Show screensaver"
 msgstr "Bildschirmschoner anzeigen"
 
@@ -8172,6 +8170,9 @@ msgstr "Zeitlupen-Geschwindigkeiten"
 
 msgid "Small"
 msgstr "Klein"
+
+msgid "Small flash STB"
+msgstr ""
 
 msgid "Small progress"
 msgstr "Geringer Fortschritt"
@@ -9630,9 +9631,6 @@ msgstr "Nicht unterstützt"
 
 msgid "Unzipping Image"
 msgstr "Image entpacken"
-
-msgid "Up"
-msgstr ""
 
 msgid "Update"
 msgstr "Aktualisieren"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OPENPLi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-22 14:19+0330\n"
+"POT-Creation-Date: 2019-03-05 01:01+0330\n"
 "PO-Revision-Date: 2015-12-18 21:05+0200\n"
 "Last-Translator: Yetkin AYDIN <yetkina@gmail.com>\n"
 "Language-Team: http://www.hurforum.com <yetkina@gmail.com>\n"
@@ -1951,8 +1951,9 @@ msgstr "Yapılandırma modu"
 msgid "Configuration..."
 msgstr "Yapılandırma..."
 
-msgid "Configure DVB-ATSC"
-msgstr ""
+#, fuzzy
+msgid "Configure ATSC"
+msgstr "Ayarlanıyor"
 
 #, fuzzy
 msgid "Configure DVB-C"
@@ -3047,9 +3048,6 @@ msgid "Done - Installed, upgraded or removed %d package (%s)"
 msgid_plural "Done - Installed, upgraded or removed %d packages (%s)"
 msgstr[0] "Yüklenen, güncellenen veya silinen %d paket (%s)"
 
-msgid "Down"
-msgstr ""
-
 msgid "Download plugins"
 msgstr "Eklenti İndir"
 
@@ -3296,6 +3294,10 @@ msgstr "İngilizce"
 #, python-format
 msgid "Enigma (re)starts: %d\n"
 msgstr "Enigma Başlama Sayısı: %d\n"
+
+#, python-format
+msgid "Enigma debug level: %d\n"
+msgstr ""
 
 #, fuzzy
 msgid "Enigma version: "
@@ -3760,6 +3762,10 @@ msgstr "Flaş"
 
 #, fuzzy
 msgid "Flash image"
+msgstr "Flaş"
+
+#, fuzzy
+msgid "Flash type: "
 msgstr "Flaş"
 
 #, fuzzy
@@ -4521,10 +4527,6 @@ msgid "Invalid directory selected: %s"
 msgstr "Seçilen klasör geçersiz: %s"
 
 msgid "Invalid location"
-msgstr "Geçersiz konum"
-
-#, fuzzy
-msgid "Invalid reason"
 msgstr "Geçersiz konum"
 
 msgid "Invalid transponder data"
@@ -5610,6 +5612,10 @@ msgstr ""
 msgid "Normal"
 msgstr "Normal"
 
+#, fuzzy
+msgid "Normal flash STB"
+msgstr "Dahili Hafıza"
+
 msgid "Normal mode"
 msgstr "Normal mod"
 
@@ -5959,14 +5965,6 @@ msgstr "Resim Gösterici"
 
 #. TRANSLATORS: (aspect ratio policy: black bars on left/right) in doubt, keep english term.
 msgid "Pillarbox"
-msgstr "Posta Kutusu"
-
-#, fuzzy
-msgid "Pillarbox/Just scale"
-msgstr "Sadece ölçek"
-
-#, fuzzy
-msgid "Pillarbox/Pan&Scan"
 msgstr "Posta Kutusu"
 
 msgid "Pilot"
@@ -6894,6 +6892,10 @@ msgstr "Enigma'yı yeniden başlat"
 msgid "Restart enigma in debug mode"
 msgstr "Enigma'yı yeniden başlat"
 
+#, fuzzy
+msgid "Restart enigma in standard mode"
+msgstr "Enigma'yı yeniden başlat"
+
 msgid "Restart network"
 msgstr "Ağı yeniden başlat"
 
@@ -7323,7 +7325,7 @@ msgstr ""
 msgid "Select 'FBC SCR' if this tuner will connect to a SCR (Unicable/JESS) device. For all other setups select 'FBC automatic'."
 msgstr ""
 
-msgid "Select 'Yes' when you want to configure this tuner for DVB-ATSC"
+msgid "Select 'Yes' when you want to configure this tuner for ATSC"
 msgstr ""
 
 msgid "Select 'Yes' when you want to configure this tuner for DVB-C"
@@ -8072,10 +8074,6 @@ msgstr "Kayıt göstergesini Göster"
 msgid "Show red LED on VFD"
 msgstr ""
 
-#, fuzzy
-msgid "Show sattelites list"
-msgstr "Servis listesini göster"
-
 msgid "Show screensaver"
 msgstr "Ekran koruyucuyu göster"
 
@@ -8276,6 +8274,9 @@ msgid "Slow motion speeds"
 msgstr "Ağır çekim hızları"
 
 msgid "Small"
+msgstr ""
+
+msgid "Small flash STB"
 msgstr ""
 
 msgid "Small progress"
@@ -9757,9 +9758,6 @@ msgstr "Desteklenmiyor"
 #, fuzzy
 msgid "Unzipping Image"
 msgstr "İndiriliyor..."
-
-msgid "Up"
-msgstr ""
 
 msgid "Update"
 msgstr "Güncelle"

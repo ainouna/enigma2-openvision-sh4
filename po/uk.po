@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: enigma2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-22 14:19+0330\n"
+"POT-Creation-Date: 2019-03-05 01:01+0330\n"
 "PO-Revision-Date: 2016-11-17 12:51+0200\n"
 "Last-Translator: vovan43<vovan43@ex.ua>, sety <tim1065@mail.ru>, Irkoff <irkoff@gmail.com>\n"
 "Language-Team: gisclub.tv <http://gisclub.tv/>\n"
@@ -1979,8 +1979,9 @@ msgstr "Режим конфігурації"
 msgid "Configuration..."
 msgstr "Конфігурація..."
 
-msgid "Configure DVB-ATSC"
-msgstr ""
+#, fuzzy
+msgid "Configure ATSC"
+msgstr "Налаштування"
 
 #, fuzzy
 msgid "Configure DVB-C"
@@ -3079,9 +3080,6 @@ msgstr[0] "Виконано - Встановлено, оновлений або 
 msgstr[1] "Виконано - Встановлено, оновлено або видалено %d пакета (%s)"
 msgstr[2] "Виконано - Встановлено, оновлено або видалено %d пакетів (%s)"
 
-msgid "Down"
-msgstr ""
-
 msgid "Download plugins"
 msgstr "Завантажити плагіни"
 
@@ -3329,6 +3327,10 @@ msgstr "Англійський"
 #, python-format
 msgid "Enigma (re)starts: %d\n"
 msgstr "Енігма перезавантажується: %d\n"
+
+#, python-format
+msgid "Enigma debug level: %d\n"
+msgstr ""
 
 #, fuzzy
 msgid "Enigma version: "
@@ -3792,6 +3794,9 @@ msgid "Flash Image"
 msgstr ""
 
 msgid "Flash image"
+msgstr ""
+
+msgid "Flash type: "
 msgstr ""
 
 #, fuzzy
@@ -4558,10 +4563,6 @@ msgid "Invalid directory selected: %s"
 msgstr "Вибрано неправильний каталог: %s"
 
 msgid "Invalid location"
-msgstr "Неправильне розташування"
-
-#, fuzzy
-msgid "Invalid reason"
 msgstr "Неправильне розташування"
 
 msgid "Invalid transponder data"
@@ -5658,6 +5659,10 @@ msgstr ""
 msgid "Normal"
 msgstr "нормальна (декодування)"
 
+#, fuzzy
+msgid "Normal flash STB"
+msgstr "Компакт-флэш"
+
 msgid "Normal mode"
 msgstr "Стандарт"
 
@@ -6008,14 +6013,6 @@ msgstr "Перегляд фото"
 
 #. TRANSLATORS: (aspect ratio policy: black bars on left/right) in doubt, keep english term.
 msgid "Pillarbox"
-msgstr "Бокові лінії"
-
-#, fuzzy
-msgid "Pillarbox/Just scale"
-msgstr "Тільки маштаб"
-
-#, fuzzy
-msgid "Pillarbox/Pan&Scan"
 msgstr "Бокові лінії"
 
 msgid "Pilot"
@@ -6944,6 +6941,10 @@ msgstr "Рестарт E2"
 msgid "Restart enigma in debug mode"
 msgstr "Рестарт E2"
 
+#, fuzzy
+msgid "Restart enigma in standard mode"
+msgstr "Рестарт E2"
+
 msgid "Restart network"
 msgstr "Перезапустити мережу"
 
@@ -7382,7 +7383,7 @@ msgstr ""
 msgid "Select 'FBC SCR' if this tuner will connect to a SCR (Unicable/JESS) device. For all other setups select 'FBC automatic'."
 msgstr ""
 
-msgid "Select 'Yes' when you want to configure this tuner for DVB-ATSC"
+msgid "Select 'Yes' when you want to configure this tuner for ATSC"
 msgstr ""
 
 msgid "Select 'Yes' when you want to configure this tuner for DVB-C"
@@ -8132,10 +8133,6 @@ msgstr "Показати індикатор запису"
 msgid "Show red LED on VFD"
 msgstr ""
 
-#, fuzzy
-msgid "Show sattelites list"
-msgstr "Показати список сервісів"
-
 msgid "Show screensaver"
 msgstr "Запустити зберігач екрану через"
 
@@ -8338,6 +8335,9 @@ msgstr "Низька швидкість"
 
 msgid "Small"
 msgstr "Невеликий"
+
+msgid "Small flash STB"
+msgstr ""
 
 msgid "Small progress"
 msgstr "Маленький прогресс"
@@ -9838,9 +9838,6 @@ msgstr "Невідома"
 #, fuzzy
 msgid "Unzipping Image"
 msgstr "Завантаження"
-
-msgid "Up"
-msgstr ""
 
 msgid "Update"
 msgstr "Оновлення"

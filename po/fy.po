@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: enigma2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-22 14:19+0330\n"
+"POT-Creation-Date: 2019-03-05 01:01+0330\n"
 "PO-Revision-Date: 2008-12-29 16:22+0100\n"
 "Last-Translator: gerrit <gerrit@nedlinux.nl>\n"
 "Language-Team: gerrit <fy@li.org>\n"
@@ -2174,8 +2174,10 @@ msgstr "Ynstellingen modus"
 msgid "Configuration..."
 msgstr "Netwurk configuraasje"
 
-msgid "Configure DVB-ATSC"
-msgstr ""
+#
+#, fuzzy
+msgid "Configure ATSC"
+msgstr "Oan it ynstellen"
 
 #
 #, fuzzy
@@ -3409,9 +3411,6 @@ msgid_plural "Done - Installed, upgraded or removed %d packages (%s)"
 msgstr[0] "Dien - %d paket(ten) ynstalllearre of bywurke"
 msgstr[1] "Dien - %d paket(ten) ynstalllearre of bywurke"
 
-msgid "Down"
-msgstr ""
-
 #
 #, fuzzy
 msgid "Download plugins"
@@ -3696,6 +3695,10 @@ msgstr "Engelsk"
 
 #, python-format
 msgid "Enigma (re)starts: %d\n"
+msgstr ""
+
+#, python-format
+msgid "Enigma debug level: %d\n"
 msgstr ""
 
 #
@@ -4216,6 +4219,11 @@ msgstr "Flash"
 #
 #, fuzzy
 msgid "Flash image"
+msgstr "Flash"
+
+#
+#, fuzzy
+msgid "Flash type: "
 msgstr "Flash"
 
 #
@@ -5068,11 +5076,6 @@ msgstr "Unjildige map selektearre: %s"
 #
 #, fuzzy
 msgid "Invalid location"
-msgstr "Plak net tastien"
-
-#
-#, fuzzy
-msgid "Invalid reason"
 msgstr "Plak net tastien"
 
 msgid "Invalid transponder data"
@@ -6347,6 +6350,11 @@ msgstr ""
 msgid "Normal"
 msgstr "Formaat"
 
+#
+#, fuzzy
+msgid "Normal flash STB"
+msgstr "Compact flash"
+
 msgid "Normal mode"
 msgstr ""
 
@@ -6748,16 +6756,6 @@ msgstr "Plaatsje spieler"
 #
 #. TRANSLATORS: (aspect ratio policy: black bars on left/right) in doubt, keep english term.
 msgid "Pillarbox"
-msgstr "Pillar box"
-
-#
-#, fuzzy
-msgid "Pillarbox/Just scale"
-msgstr "Alinne skale"
-
-#
-#, fuzzy
-msgid "Pillarbox/Pan&Scan"
 msgstr "Pillar box"
 
 #
@@ -7841,6 +7839,9 @@ msgstr ""
 msgid "Restart enigma in debug mode"
 msgstr ""
 
+msgid "Restart enigma in standard mode"
+msgstr ""
+
 #
 msgid "Restart network"
 msgstr "Netwurk nij starte"
@@ -8344,7 +8345,7 @@ msgstr ""
 msgid "Select 'FBC SCR' if this tuner will connect to a SCR (Unicable/JESS) device. For all other setups select 'FBC automatic'."
 msgstr ""
 
-msgid "Select 'Yes' when you want to configure this tuner for DVB-ATSC"
+msgid "Select 'Yes' when you want to configure this tuner for ATSC"
 msgstr ""
 
 msgid "Select 'Yes' when you want to configure this tuner for DVB-C"
@@ -9205,11 +9206,6 @@ msgstr ""
 msgid "Show red LED on VFD"
 msgstr ""
 
-#
-#, fuzzy
-msgid "Show sattelites list"
-msgstr "Satellyten"
-
 msgid "Show screensaver"
 msgstr ""
 
@@ -9440,6 +9436,9 @@ msgid "Slow motion speeds"
 msgstr "Langsaam beweechjen faasje"
 
 msgid "Small"
+msgstr ""
+
+msgid "Small flash STB"
 msgstr ""
 
 #
@@ -11096,9 +11095,6 @@ msgstr ""
 #, fuzzy
 msgid "Unzipping Image"
 msgstr "Binnenheljen fan"
-
-msgid "Up"
-msgstr ""
 
 #
 msgid "Update"

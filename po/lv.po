@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: enigma2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-22 14:19+0330\n"
+"POT-Creation-Date: 2019-03-05 01:01+0330\n"
 "PO-Revision-Date: 2014-11-12 00:49+0200\n"
 "Last-Translator: Taapat <taapat@gmail.com>\n"
 "Language-Team: Taapat <taapat@gmail.com>\n"
@@ -1957,20 +1957,18 @@ msgstr "Konfigurēt"
 msgid "Configuration..."
 msgstr "Konfigurācija..."
 
-msgid "Configure DVB-ATSC"
-msgstr ""
-
 #, fuzzy
+msgid "Configure ATSC"
+msgstr "Iestatīt DVB-ATSC"
+
 msgid "Configure DVB-C"
-msgstr "Konfigurē"
+msgstr "Iestatīt DVB-C"
 
-#, fuzzy
 msgid "Configure DVB-S"
-msgstr "Konfigurē"
+msgstr "Iestatīt DVB-S"
 
-#, fuzzy
 msgid "Configure DVB-T"
-msgstr "Konfigurē"
+msgstr "Iestatīt DVB-T"
 
 msgid "Configure an additional delay to improve external subtitle synchronisation."
 msgstr "Uzstāda papildus aizturi lai darbotos ārējo subtitru sinhronizācija."
@@ -3034,9 +3032,6 @@ msgstr[0] "Pabeigts - instalēta, atjaunināta vai dzēsta %d pakotne (%s)"
 msgstr[1] "Pabeigts - instalētas, atjauninātas vai dzēstas %d pakotnes (%s)"
 msgstr[2] "Pabeigts - instalētas, atjauninātas vai dzēstas %d pakotnes (%s)"
 
-msgid "Down"
-msgstr ""
-
 msgid "Download plugins"
 msgstr "Lejuplādēt spraudņus"
 
@@ -3278,6 +3273,10 @@ msgstr "Angļu"
 #, python-format
 msgid "Enigma (re)starts: %d\n"
 msgstr "Enigma (pār)startēta: %d reizes\n"
+
+#, python-format
+msgid "Enigma debug level: %d\n"
+msgstr ""
 
 msgid "Enigma version: "
 msgstr "Enigmas versija: "
@@ -3747,6 +3746,10 @@ msgstr "Uzstādīt"
 msgid "Flash image"
 msgstr "Uzstādīt imidžu"
 
+#, fuzzy
+msgid "Flash type: "
+msgstr "Uzstādīt"
+
 msgid "Flashing Image"
 msgstr "Uzstāda imidžu"
 
@@ -4176,13 +4179,11 @@ msgstr "Ātro taustiņu iestatījumi"
 msgid "Hotkey zap"
 msgstr "Pārslēgšana uz"
 
-#, fuzzy
 msgid "Hotswitchable"
-msgstr "netestēts"
+msgstr "Pārslēdzams"
 
-#, fuzzy
 msgid "Hotswitchable tuner"
-msgstr "Pārslēdzamo uztvērēju tipi:"
+msgstr "Pārslēdzams uztvērējs"
 
 msgid "How many minutes do you want add to the recording?"
 msgstr "Cik minūšu vēlaties pievienot ierakstam?"
@@ -4492,10 +4493,6 @@ msgstr "Izvēlēta nepareiza mape: %s"
 msgid "Invalid location"
 msgstr "Nederīga vieta"
 
-#, fuzzy
-msgid "Invalid reason"
-msgstr "Nederīga vieta"
-
 msgid "Invalid transponder data"
 msgstr "Nederīgi transpondera dati"
 
@@ -4672,9 +4669,8 @@ msgstr ""
 msgid "LED display configuration"
 msgstr "Media iestatījumi"
 
-#, fuzzy
 msgid "LED display configuration for Fortis HS7810A"
-msgstr "Media iestatījumi"
+msgstr ""
 
 msgid "LNB"
 msgstr "LNB"
@@ -5566,6 +5562,10 @@ msgstr "Norfolkas sala"
 msgid "Normal"
 msgstr "Normāls"
 
+#, fuzzy
+msgid "Normal flash STB"
+msgstr "Zibatmiņa"
+
 msgid "Normal mode"
 msgstr "Normāls režīms"
 
@@ -5907,14 +5907,6 @@ msgstr "Attēlu rādītājs"
 
 #. TRANSLATORS: (aspect ratio policy: black bars on left/right) in doubt, keep english term.
 msgid "Pillarbox"
-msgstr "Melnas joslas malās"
-
-#, fuzzy
-msgid "Pillarbox/Just scale"
-msgstr "Mērogot"
-
-#, fuzzy
-msgid "Pillarbox/Pan&Scan"
 msgstr "Melnas joslas malās"
 
 msgid "Pilot"
@@ -6824,6 +6816,10 @@ msgstr "Pārstartēt enigmu"
 msgid "Restart enigma in debug mode"
 msgstr "Pārstartēt enigmu testa režīmā"
 
+#, fuzzy
+msgid "Restart enigma in standard mode"
+msgstr "Pārstartēt enigmu testa režīmā"
+
 msgid "Restart network"
 msgstr "Pārstartēt tīklu"
 
@@ -7251,17 +7247,18 @@ msgstr "Izvēlieties 'A' vai 'B', ja tas nepieciešmas jūsu antenu sistēmai, p
 msgid "Select 'FBC SCR' if this tuner will connect to a SCR (Unicable/JESS) device. For all other setups select 'FBC automatic'."
 msgstr "Izvēlieties 'FBC SCR', ja šis uztvērējs izmantos SCR (Unicable/JESS) ierīci. Visiem citiem iestatījumiem izvēlieties 'FBC automātiski'."
 
-msgid "Select 'Yes' when you want to configure this tuner for DVB-ATSC"
-msgstr ""
+#, fuzzy
+msgid "Select 'Yes' when you want to configure this tuner for ATSC"
+msgstr "Ja vēlaties izmantot šo uztvērēju DVB-ATSC uztveršanai izvēlieties 'Jā'"
 
 msgid "Select 'Yes' when you want to configure this tuner for DVB-C"
-msgstr ""
+msgstr "Ja vēlaties izmantot šo uztvērēju DVB-C uztveršanai izvēlieties 'Jā'"
 
 msgid "Select 'Yes' when you want to configure this tuner for DVB-S"
-msgstr ""
+msgstr "Ja vēlaties izmantot šo uztvērēju DVB-S uztveršanai izvēlieties 'Jā'"
 
 msgid "Select 'Yes' when you want to configure this tuner for DVB-T"
-msgstr ""
+msgstr "Ja vēlaties izmantot šo uztvērēju DVB-T uztveršanai izvēlieties 'Jā'"
 
 msgid "Select 'band' if using a 'universal' LNB, otherwise consult your LNB spec sheet."
 msgstr "Ja izmantojat 'universālo' LNB, izvēlieties 'josla', pretējā gadījumā skatiet LNB specifikāciju."
@@ -7985,10 +7982,6 @@ msgstr "Rādīt ieraksta indikatoru"
 msgid "Show red LED on VFD"
 msgstr ""
 
-#, fuzzy
-msgid "Show sattelites list"
-msgstr "Atvērt kanālu sarakstu"
-
 msgid "Show screensaver"
 msgstr "Rādīt ekrānsaudzētāju"
 
@@ -8187,6 +8180,9 @@ msgstr "Palēninātās kustības ātrumi"
 msgid "Small"
 msgstr "Mazs"
 
+msgid "Small flash STB"
+msgstr ""
+
 msgid "Small progress"
 msgstr "Izpilda"
 
@@ -8319,9 +8315,8 @@ msgstr "Spāņu"
 msgid "Spark7162 select tuner mode"
 msgstr ""
 
-#, fuzzy
 msgid "SparkUnionTunerType config"
-msgstr "Uztvērēja konfigurācija"
+msgstr ""
 
 msgid "Special 1"
 msgstr "Īpašs 1"
@@ -8724,9 +8719,8 @@ msgstr "Pārslēgt uz iepriekšējo papildkanālu"
 msgid "Switch to radio mode"
 msgstr "Pārslēgt uz radio režīmu"
 
-#, fuzzy
 msgid "Switchable tuner types"
-msgstr "Pārslēdzamo uztvērēju tipi:"
+msgstr "Izmantojamie uztvērēji"
 
 msgid "Switzerland"
 msgstr "Šveice"
@@ -9033,7 +9027,7 @@ msgstr ""
 "Lūdzu neuztraucieties ja jums liekas, ka šeit attēlotas aizdomīgas vērtības!"
 
 msgid "This is a multitype tuner. Available options depend on the hardware."
-msgstr ""
+msgstr "Šis ir vairāku veidu uztvērējs. Pieejamās opcijas ir atkarīgas no aparatūras."
 
 msgid "This is the order in which DiSEqC commands are sent to the aerial system. The order must correspond exactly with the order the physical devices are arranged along the signal cable (starting from the receiver end)."
 msgstr "Komadu rinda, kādā DiSEqC komandas tiek nosūtītas. Komandu rindai precīzi jāatbilst kārtībai, kādā sākot no uztvērēja fiziskās ierīces tiek pielēgtas kabelim."
@@ -9639,9 +9633,6 @@ msgstr "Neatbalstāms"
 
 msgid "Unzipping Image"
 msgstr "Atarhivē imidžu"
-
-msgid "Up"
-msgstr ""
 
 msgid "Update"
 msgstr "Atjaunināt"
@@ -11209,13 +11200,11 @@ msgstr "brīvs"
 msgid "from"
 msgstr "no"
 
-#, fuzzy
 msgid "fs9000VFD display"
-msgstr "DVD atskaņotājs"
+msgstr ""
 
-#, fuzzy
 msgid "fs9000VFD-Icons"
-msgstr "Ikona"
+msgstr ""
 
 msgid "further education"
 msgstr "tālākizglītība"
@@ -11259,41 +11248,32 @@ msgstr ""
 msgid "hs7110VFD control"
 msgstr ""
 
-#, fuzzy
 msgid "hs7110VFD display"
-msgstr "DVD atskaņotājs"
+msgstr ""
 
-#, fuzzy
 msgid "hs742xVFD display"
-msgstr "DVD atskaņotājs"
+msgstr ""
 
-#, fuzzy
 msgid "hs742xVFD-Icons"
-msgstr "Ikona"
+msgstr ""
 
-#, fuzzy
 msgid "hs7810aVFD display"
-msgstr "DVD atskaņotājs"
+msgstr ""
 
-#, fuzzy
 msgid "hs7810aVFD-Icons"
-msgstr "Ikona"
+msgstr ""
 
-#, fuzzy
 msgid "hs8200VFD display"
-msgstr "DVD atskaņotājs"
+msgstr ""
 
-#, fuzzy
 msgid "hs8200VFD-Icons"
-msgstr "Ikona"
+msgstr ""
 
-#, fuzzy
 msgid "hs9510VFD display"
-msgstr "DVD atskaņotājs"
+msgstr ""
 
-#, fuzzy
 msgid "hs9510VFD-Icons"
-msgstr "Ikona"
+msgstr ""
 
 msgid "in menu and plugins"
 msgstr "iestatījumiem un spraudņiem"

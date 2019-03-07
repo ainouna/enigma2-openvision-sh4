@@ -13,7 +13,7 @@ from Components.Label import Label
 from Components.ProgressBar import ProgressBar
 
 from Tools.StbHardware import getFPVersion
-from enigma import eTimer, eLabel, eConsoleAppContainer, getDesktop
+from enigma import eTimer, eLabel, eConsoleAppContainer, getDesktop, eGetEnigmaDebugLvl
 
 from Components.GUIComponent import GUIComponent
 import skin, os
@@ -26,6 +26,7 @@ class About(Screen):
 
 		AboutText = _("Hardware: ") + about.getHardwareTypeString() + "\n"
 		AboutText += _("CPU: ") + about.getCPUInfoString() + "\n"
+		AboutText += _("Flash type: ") + about.getFlashType() + "\n"
 		AboutText += _("Image: ") + about.getImageTypeString() + "\n"
 		AboutText += _("Build date: ") + about.getBuildDateString() + "\n"
 		AboutText += _("Last upgrade: ") + about.getUpdateDateString() + "\n"
@@ -54,6 +55,7 @@ class About(Screen):
 		AboutText += _("Python version: ") + about.getPythonVersionString() + "\n"
 
 		AboutText += _("Enigma (re)starts: %d\n") % config.misc.startCounter.value
+		AboutText += _("Enigma debug level: %d\n") % eGetEnigmaDebugLvl()
 
 		fp_version = getFPVersion()
 		if fp_version is None:
@@ -338,7 +340,7 @@ class MemoryInfoSkinParams(GUIComponent):
 					self.rows_in_column = int(value)
 			self.skinAttributes = attribs
 		return GUIComponent.applySkin(self, desktop, screen)
-	
+
 	GUI_WIDGET = eLabel
 
 class Troubleshoot(Screen):
@@ -431,6 +433,10 @@ class Troubleshoot(Screen):
 		self.container = None
 		self.close()
 
+	def getDebugFilesList(self):
+		import glob
+		return [x for x in sorted(glob.glob("/home/root/enigma.*.debuglog"), key=lambda x: os.path.isfile(x) and os.path.getmtime(x))]
+
 	def getLogFilesList(self):
 		import glob
 		home_root = "/home/root/enigma2_crash.log"
@@ -445,7 +451,7 @@ class Troubleshoot(Screen):
 				self.titles.append("%s" % install_log)
 				self.commands.append("cat %s" % install_log)
 		self.numberOfCommands = len(self.commands)
-		fileNames = self.getLogFilesList()
+		fileNames = self.getLogFilesList() + self.getDebugFilesList()
 		if fileNames:
 			totalNumberOfLogfiles = len(fileNames)
 			logfileCounter = 1

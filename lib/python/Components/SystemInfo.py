@@ -1,6 +1,8 @@
-from enigma import eDVBResourceManager, Misc_Options, eDVBCIInterfaces
+from enigma import eDVBResourceManager, Misc_Options, eDVBCIInterfaces, eGetEnigmaDebugLvl, getBoxType
 from Tools.Directories import fileExists, fileCheck, pathExists, fileHas
 from Tools.HardwareInfo import HardwareInfo
+
+import os
 
 SystemInfo = {}
 
@@ -20,6 +22,7 @@ def hassoftcaminstalled():
 	from Tools.camcontrol import CamControl
 	return len(CamControl('softcam').getList()) > 1
 
+SystemInfo["InDebugMode"] = eGetEnigmaDebugLvl() >= 4
 SystemInfo["CommonInterface"] = eDVBCIInterfaces.getInstance().getNumOfSlots()
 SystemInfo["CommonInterfaceCIDelay"] = fileCheck("/proc/stb/tsmux/rmx_delay")
 for cislot in range (0, SystemInfo["CommonInterface"]):
@@ -63,9 +66,9 @@ SystemInfo["LcdLiveDecoder"] = fileCheck("/proc/stb/lcd/live_decoder")
 SystemInfo["FastChannelChange"] = False
 SystemInfo["3DMode"] = fileCheck("/proc/stb/fb/3dmode") or fileCheck("/proc/stb/fb/primary/3d")
 SystemInfo["3DZNorm"] = fileCheck("/proc/stb/fb/znorm") or fileCheck("/proc/stb/fb/primary/zoffset")
-SystemInfo["Blindscan_t2_available"] = fileCheck("/proc/stb/info/vumodel")
+SystemInfo["Blindscan_t2_available"] = False
 SystemInfo["RcTypeChangable"] = pathExists('/proc/stb/ir/rc/type')
-SystemInfo["HasFullHDSkinSupport"] = HardwareInfo().get_device_model() in ("spark", "spark7162", "atevio7500")
+SystemInfo["HasFullHDSkinSupport"] = getBoxType() in ("atevio7500","hl101","spark","spark7162","vip1_v2","vip2_v1")
 SystemInfo["HasBypassEdidChecking"] = fileCheck("/proc/stb/hdmi/bypass_edid_checking")
 SystemInfo["HasColorspace"] = fileCheck("/proc/stb/video/hdmi_colorspace")
 SystemInfo["HasColorspaceSimple"] = SystemInfo["HasColorspace"]
@@ -81,8 +84,8 @@ SystemInfo["Has2160p"] = False
 SystemInfo["HasHDMIpreemphasis"] = fileCheck("/proc/stb/hdmi/preemphasis")
 SystemInfo["HasColorimetry"] = fileCheck("/proc/stb/video/hdmi_colorimetry")
 SystemInfo["HasHdrType"] = fileCheck("/proc/stb/video/hdmi_hdrtype")
-SystemInfo["HasHDMI-CEC"] = fileExists("/usr/lib/enigma2/python/Plugins/SystemPlugins/HdmiCEC/plugin.pyo") and fileExists("/lib/modules/cec.ko") and fileExists("proc/stb/cec/send")
-SystemInfo["HasYPbPr"] = HardwareInfo().get_device_model() in ("atevio7500", "fortis_hdbox", "octagon1008", "hs7420", "hs7429", "ufs912", "ufs913")
+SystemInfo["HasHDMI-CEC"] = HardwareInfo().has_hdmi() and fileExists("/usr/lib/enigma2/python/Plugins/SystemPlugins/HdmiCEC/plugin.pyo") and (fileExists("/dev/cec0") or fileExists("/dev/hdmi_cec") or fileExists("/dev/misc/hdmi_cec0"))
+SystemInfo["HasYPbPr"] = getBoxType() in ("atevio7500","fortis_hdbox","hl101","hs7420","hs7429","octagon1008","tf7700","ufs912","ufs913","vip1_v2","vip2_v1")
 SystemInfo["HasScart"] = True
 SystemInfo["HasSVideo"] = False
 SystemInfo["HasComposite"] = True
@@ -92,9 +95,9 @@ SystemInfo["Has3DSurround"] = fileExists("/proc/stb/audio/3d_surround_choices") 
 SystemInfo["Has3DSpeaker"] = fileExists("/proc/stb/audio/3d_surround_speaker_position_choices") and fileCheck("/proc/stb/audio/3d_surround_speaker_position")
 SystemInfo["Has3DSurroundSpeaker"] = fileExists("/proc/stb/audio/3dsurround_choices") and fileCheck("/proc/stb/audio/3dsurround")
 SystemInfo["Has3DSurroundSoftLimiter"] = fileExists("/proc/stb/audio/3dsurround_softlimiter_choices") and fileCheck("/proc/stb/audio/3dsurround_softlimiter")
-SystemInfo["hasXcoreVFD"] = fileCheck("/sys/module/brcmstb_%s/parameters/pt6302_cgram" % HardwareInfo().get_device_model())
+SystemInfo["hasXcoreVFD"] = False
 SystemInfo["HasOfflineDecoding"] = True
-SystemInfo["canFlashWithOfgwrite"] = False
+SystemInfo["canFlashWithOfgwrite"] = True
 SystemInfo["canMultiBoot"] = False
 SystemInfo["canMode12"] = '192M' or '200M'
 SystemInfo["HDRSupport"] = fileExists("/proc/stb/hdmi/hlg_support_choices") and fileCheck("/proc/stb/hdmi/hlg_support")
@@ -102,3 +105,4 @@ SystemInfo["CanDownmixAC3"] = fileHas("/proc/stb/audio/ac3_choices", "downmix")
 SystemInfo["CanDownmixDTS"] = fileHas("/proc/stb/audio/dts_choices", "downmix")
 SystemInfo["CanDownmixAAC"] = fileHas("/proc/stb/audio/aac_choices", "downmix")
 SystemInfo["HDMIAudioSource"] = fileCheck("/proc/stb/hdmi/audio_source")
+SystemInfo["SmallFlash"] = fileExists("/etc/smallflash")

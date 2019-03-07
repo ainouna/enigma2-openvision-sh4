@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: enigma2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-22 14:19+0330\n"
+"POT-Creation-Date: 2019-03-05 01:01+0330\n"
 "PO-Revision-Date: 2017-03-05 13:24+0100\n"
 "Last-Translator: Magnus Nilsson <mag_nilsson@hotmail.com>\n"
 "Language-Team: \n"
@@ -2189,8 +2189,10 @@ msgstr "Konfigurationsläge"
 msgid "Configuration..."
 msgstr "Konfiguration..."
 
-msgid "Configure DVB-ATSC"
-msgstr ""
+#
+#, fuzzy
+msgid "Configure ATSC"
+msgstr "Konfigurering"
 
 #
 #, fuzzy
@@ -3406,9 +3408,6 @@ msgid_plural "Done - Installed, upgraded or removed %d packages (%s)"
 msgstr[0] "Klar - installerat, uppgraderat eller avinstallerat %d paket (%s)"
 msgstr[1] "Klar - installerat, uppgraderat eller avinstallerat %d paket (%s)"
 
-msgid "Down"
-msgstr ""
-
 #
 msgid "Download plugins"
 msgstr "Ladda ner plugins"
@@ -3687,6 +3686,10 @@ msgstr "Engelska"
 #, python-format
 msgid "Enigma (re)starts: %d\n"
 msgstr "Enigma (om)start : %d\n"
+
+#, python-format
+msgid "Enigma debug level: %d\n"
+msgstr ""
 
 #, fuzzy
 msgid "Enigma version: "
@@ -4202,6 +4205,11 @@ msgstr "Flash"
 #
 #, fuzzy
 msgid "Flash image"
+msgstr "Flash"
+
+#
+#, fuzzy
+msgid "Flash type: "
 msgstr "Flash"
 
 #
@@ -5040,11 +5048,6 @@ msgstr "Ogiltigt bibliotek valt : %s"
 
 #
 msgid "Invalid location"
-msgstr "Ogiltig sökväg"
-
-#
-#, fuzzy
-msgid "Invalid reason"
 msgstr "Ogiltig sökväg"
 
 msgid "Invalid transponder data"
@@ -6282,6 +6285,11 @@ msgstr ""
 msgid "Normal"
 msgstr "normal"
 
+#
+#, fuzzy
+msgid "Normal flash STB"
+msgstr "Compact Flash"
+
 msgid "Normal mode"
 msgstr "Normalt läge"
 
@@ -6665,16 +6673,6 @@ msgstr "Bildspelare"
 #
 #. TRANSLATORS: (aspect ratio policy: black bars on left/right) in doubt, keep english term.
 msgid "Pillarbox"
-msgstr "Svarta kanter"
-
-#
-#, fuzzy
-msgid "Pillarbox/Just scale"
-msgstr "Bara skala"
-
-#
-#, fuzzy
-msgid "Pillarbox/Pan&Scan"
 msgstr "Svarta kanter"
 
 #
@@ -7750,6 +7748,10 @@ msgstr "Starta om enigma"
 msgid "Restart enigma in debug mode"
 msgstr "Starta om enigma"
 
+#, fuzzy
+msgid "Restart enigma in standard mode"
+msgstr "Starta om enigma"
+
 #
 msgid "Restart network"
 msgstr "Startar om nätverk"
@@ -8244,7 +8246,7 @@ msgstr ""
 msgid "Select 'FBC SCR' if this tuner will connect to a SCR (Unicable/JESS) device. For all other setups select 'FBC automatic'."
 msgstr ""
 
-msgid "Select 'Yes' when you want to configure this tuner for DVB-ATSC"
+msgid "Select 'Yes' when you want to configure this tuner for ATSC"
 msgstr ""
 
 msgid "Select 'Yes' when you want to configure this tuner for DVB-C"
@@ -9068,10 +9070,6 @@ msgstr "Visa inspelningsikon"
 msgid "Show red LED on VFD"
 msgstr ""
 
-#, fuzzy
-msgid "Show sattelites list"
-msgstr "Visa kanallista"
-
 msgid "Show screensaver"
 msgstr "Visa skärmsläckare"
 
@@ -9301,6 +9299,9 @@ msgstr "Hastigheter för slowmotion"
 
 msgid "Small"
 msgstr "Liten"
+
+msgid "Small flash STB"
+msgstr ""
 
 #
 msgid "Small progress"
@@ -10976,9 +10977,6 @@ msgstr "Stöds ej"
 #, fuzzy
 msgid "Unzipping Image"
 msgstr "Laddar ner"
-
-msgid "Up"
-msgstr ""
 
 #
 msgid "Update"

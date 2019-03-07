@@ -3,6 +3,7 @@
 #include <linux/dvb/version.h>
 
 #include <lib/base/eerror.h>
+#include <lib/base/estring.h>
 #include <lib/base/wrappers.h>
 #include <lib/dvb/cahandler.h>
 #include <lib/dvb/idvb.h>
@@ -113,7 +114,6 @@ eDVBResourceManager::eDVBResourceManager()
 
 	m_fbcmng = new eFBCTunerManager(instance);
 
-#if defined(__sh__)
 		/*
 		 * this is a strange hack: the drivers seem to only work correctly after
 		 * demux0 has been used once. After that, we can use demux1,2,...
@@ -121,7 +121,6 @@ eDVBResourceManager::eDVBResourceManager()
 	initDemux(0);
 		/* for pip demux1 also be used once */
 	initDemux(1);
-#endif
 
 	CONNECT(m_releaseCachedChannelTimer->timeout, eDVBResourceManager::releaseCachedChannel);
 }
@@ -350,20 +349,6 @@ eDVBUsbAdapter::eDVBUsbAdapter(int nr)
 		goto error;
 	}
 
-#if !defined(__sh__)
-	struct dtv_properties props;
-	struct dtv_property prop[1];
-
-	prop[0].cmd = DTV_ENUM_DELSYS;
-	memset(prop[0].u.buffer.data, 0, sizeof(prop[0].u.buffer.data));
-	prop[0].u.buffer.len = 0;
-	props.num = 1;
-	props.props = prop;
-
-	if (ioctl(frontend, FE_GET_PROPERTY, &props) < 0)
-		eDebug("[eDVBUsbAdapter] FE_GET_PROPERTY DTV_ENUM_DELSYS failed %m");
-#endif
-
 	::close(frontend);
 	frontend = -1;
 
@@ -452,10 +437,6 @@ eDVBUsbAdapter::eDVBUsbAdapter(int nr)
 	ioctl(vtunerFd, VTUNER_SET_NAME, name);
 	ioctl(vtunerFd, VTUNER_SET_TYPE, type);
 	ioctl(vtunerFd, VTUNER_SET_FE_INFO, &fe_info);
-#if !defined(__sh__)
-	if (prop[0].u.buffer.len > 0)
-		ioctl(vtunerFd, VTUNER_SET_DELSYS, prop[0].u.buffer.data);
-#endif
 	ioctl(vtunerFd, VTUNER_SET_HAS_OUTPUTS, "no");
 	ioctl(vtunerFd, VTUNER_SET_ADAPTER, nr);
 
@@ -826,24 +807,29 @@ std::string eDVBResourceManager::getFrontendCapabilities(int index)
 	return "";
 }
 
-void eDVBResourceManager::setFrontendType(int index, const char *type)
+void eDVBResourceManager::setFrontendType(int index, const char *types)
 {
 	for (eSmartPtrList<eDVBRegisteredFrontend>::iterator i(m_frontend.begin()); i != m_frontend.end(); ++i)
 	{
-		if (i->m_frontend->getSlotID() == index)
+		if (i->m_frontend->getSlotID() != index)
 		{
-			std::vector<fe_delivery_system_t> whitelist;
-			if (!strcmp(type, "DVB-S2") || !strcmp(type, "DVB-S"))
+			continue;
+		}
+
+		std::vector<fe_delivery_system_t> whitelist;
+		for (const auto& type : split(types, ","))
+		{
+			if (type == "DVB-S2" || type == "DVB-S")
 			{
 				whitelist.push_back(SYS_DVBS);
 				whitelist.push_back(SYS_DVBS2);
 			}
-			else if (!strcmp(type, "DVB-T2") || !strcmp(type, "DVB-T"))
+			else if (type == "DVB-T2" || type == "DVB-T")
 			{
 				whitelist.push_back(SYS_DVBT);
 				whitelist.push_back(SYS_DVBT2);
 			}
-			else if (!strcmp(type, "DVB-C"))
+			else if (type == "DVB-C")
 			{
 #if defined SYS_DVBC_ANNEX_A
 				whitelist.push_back(SYS_DVBC_ANNEX_A);
@@ -852,14 +838,14 @@ void eDVBResourceManager::setFrontendType(int index, const char *type)
 				whitelist.push_back(SYS_DVBC_ANNEX_AC);
 #endif
 			}
-			else if (!strcmp(type, "ATSC"))
+			else if (type == "ATSC")
 			{
 				whitelist.push_back(SYS_ATSC);
 				whitelist.push_back(SYS_DVBC_ANNEX_B);
 			}
-			i->m_frontend->setDeliverySystemWhitelist(whitelist);
-			break;
 		}
+		i->m_frontend->setDeliverySystemWhitelist(whitelist);
+		break;
 	}
 }
 
@@ -2171,28 +2157,10 @@ RESULT eDVBChannel::playSource(ePtr<iTsSource> &source, const char *streaminfo_f
 
 	if (m_pvr_fd_dst < 0)
 	{
-#if defined(__sh__) // our pvr device is called dvr
 		char dvrDev[128];
 		int dvrIndex = m_mgr->m_adapter.begin()->getNumDemux() - 1;
 		sprintf(dvrDev, "/dev/dvb/adapter0/dvr%d", dvrIndex);
 		m_pvr_fd_dst = open(dvrDev, O_WRONLY);
-#else
-		ePtr<eDVBAllocatedDemux> &demux = m_demux ? m_demux : m_decoder_demux;
-		if (demux)
-		{
-			m_pvr_fd_dst = demux->get().openDVR(O_WRONLY);
-			if (m_pvr_fd_dst < 0)
-			{
-				eDebug("[eDVBChannel] can't open /dev/dvb/adapterX/dvrX: %m");
-				return -ENODEV;
-			}
-		}
-		else
-		{
-			eDebug("[eDVBChannel] no demux allocated yet.. so its not possible to open the dvr device!!");
-			return -ENODEV;
-		}
-#endif
 	}
 
 	m_pvr_thread = new eDVBChannelFilePush(m_source->getPacketSize());
