@@ -13,6 +13,15 @@
 	<code> .. code .. </code>
 		"exec"s code
 -->
+		<menu text="DZ Extra Panel" entryID="extra_selection">
+		<id val="camsetup" />
+		<item text="Softcam Setup" entryID="softcam_setup"><screen module="SoftcamSetup" screen="SoftcamSetup" /></item>
+                <item text="Cron Manager" entryID="cron_manager"><screen module="CronManager" screen="CronManager"/></item>
+                <item text="Mount Manager" entryID="mount_manager"><screen module="MountManager" screen="HddMount"/></item>
+                <item text="Swap Manager" entryID="swap_manager"><screen module="SwapManager" screen="Swap"/></item>
+                <item text="Job Manager" entryID="ScriptRunner"><screen module="ScriptRunner" screen="ScriptRunner"/></item>
+		</menu>	
+	
 		<item level="0" text="Timer" entryID="timer_edit"><screen module="TimerEdit" screen="TimerEditList"/></item>
 		<item level="1" text="VCR scart" entryID="scart_switch" conditional="config.usage.show_vcr_scart.value" requires="ScartSwitch"><code>self.session.scart.VCRSbChanged(3)</code></item>
 
