@@ -36,7 +36,7 @@ def getBuildDateString():
 def getUpdateDateString():
 	try:
 		from glob import glob
-		build = [x.split("-")[-2:-1][0][-8:] for x in open(glob("/var/lib/opkg/info/openvision-bootlogo.control")[0], "r") if x.startswith("Version:")][0]
+		build = [x.split("-")[-2:-1][0][-8:] for x in open(glob("/var/lib/opkg/info/enigma2-plugin-skins-pli-hd.control")[0], "r") if x.startswith("Version:")][0]
 		if build.isdigit():
 			return  "%s-%s-%s" % (build[:4], build[4:6], build[6:])
 	except:
@@ -51,13 +51,8 @@ def getEnigmaVersionString():
 	return enigma_version
 
 def getGStreamerVersionString():
-	try:
-		from glob import glob
-		gst = [x.split("Version: ") for x in open(glob("/var/lib/opkg/info/gstreamer[0-9].[0-9].control")[0], "r") if x.startswith("Version:")][0]
-		return "%s" % gst[1].split("+")[0].replace("\n","")
-	except:
-		return _("unknown")
-
+	import enigma
+	return enigma.getGStreamerVersionString()
 def getKernelVersionString():
 	try:
 		return open("/proc/version","r").read().split(' ', 4)[2].split('-',2)[0]
