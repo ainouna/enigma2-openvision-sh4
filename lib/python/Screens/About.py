@@ -13,7 +13,7 @@ from Components.Label import Label
 from Components.ProgressBar import ProgressBar
 
 from Tools.StbHardware import getFPVersion
-from enigma import eTimer, eLabel, eConsoleAppContainer, getDesktop, eGetEnigmaDebugLvl
+from enigma import eTimer, eLabel, eConsoleAppContainer, getDesktop
 
 from Components.GUIComponent import GUIComponent
 import skin, os
@@ -29,7 +29,9 @@ class About(Screen):
 		AboutText += _("Flash type: ") + about.getFlashType() + "\n"
 		AboutText += _("Image: ") + about.getImageTypeString() + "\n"
 		AboutText += _("Build date: ") + about.getBuildDateString() + "\n"
-		AboutText += _("Last upgrade: ") + about.getUpdateDateString() + "\n"
+		ImageVersion = _("Last upgrade: ") + about.getImageVersionString()
+		self["ImageVersion"] = StaticText(ImageVersion)
+		AboutText += ImageVersion + "\n"
 
 		# [WanWizard] Removed until we find a reliable way to determine the installation date
 		# AboutText += _("Installed: ") + about.getFlashDateString() + "\n"
@@ -55,8 +57,6 @@ class About(Screen):
 		AboutText += _("Python version: ") + about.getPythonVersionString() + "\n"
 
 		AboutText += _("Enigma (re)starts: %d\n") % config.misc.startCounter.value
-		AboutText += _("Enigma debug level: %d\n") % eGetEnigmaDebugLvl()
-
 		fp_version = getFPVersion()
 		if fp_version is None:
 			fp_version = ""
@@ -71,7 +71,7 @@ class About(Screen):
 		self["TunerHeader"] = StaticText(_("Detected NIMs:"))
 		AboutText += "\n" + _("Detected NIMs:") + "\n"
 
-		nims = nimmanager.nimListCompressed()
+		nims = nimmanager.nimList(showFBCTuners=False)
 		for count in range(len(nims)):
 			if count < 4:
 				self["Tuner" + str(count)] = StaticText(nims[count])
