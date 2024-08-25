@@ -11,8 +11,6 @@ def getImageVersionString():
 	try:
 		if os.path.isfile('/var/lib/opkg/status'):
 			st = os.stat('/var/lib/opkg/status')
-		else:
-			st = os.stat('/usr/lib/ipkg/status')
 		tm = time.localtime(st.st_mtime)
 		if tm.tm_year >= 2011:
 			return time.strftime("%Y-%m-%d %H:%M:%S", tm)
@@ -36,7 +34,7 @@ def getBuildDateString():
 def getUpdateDateString():
 	try:
 		from glob import glob
-		build = [x.split("-")[-2:-1][0][-8:] for x in open(glob("/var/lib/opkg/info/enigma2-plugin-skins-pli-hd.control")[0], "r") if x.startswith("Version:")][0]
+		build = [x.split("-")[-2:-1][0][-8:] for x in open(glob("/var/lib/opkg/info/openpli-bootlogo.control")[0], "r") if x.startswith("Version:")][0]
 		if build.isdigit():
 			return  "%s-%s-%s" % (build[:4], build[4:6], build[6:])
 	except:
@@ -50,9 +48,14 @@ def getEnigmaVersionString():
 		enigma_version = enigma_version [:-12]
 	return enigma_version
 
-def getGStreamerVersionString():
-	import enigma
-	return enigma.getGStreamerVersionString()
+def getGStreamerVersionString(cpu):
+	try:
+		from glob import glob
+		gst = [x.split("Version: ") for x in open(glob("/var/lib/opkg/info/gstreamer[0-9].[0-9].control")[0], "r") if x.startswith("Version:")][0]
+		return "%s" % gst[1].split("+")[0].replace("\n","")
+	except:
+		return _("Not Required") if cpu.upper().startswith('HI') else _("Not Installed")
+
 def getKernelVersionString():
 	try:
 		return open("/proc/version","r").read().split(' ', 4)[2].split('-',2)[0]
@@ -114,7 +117,7 @@ def getCPUInfoString():
 			except:
 				pass
 		if temperature:
-			return "%s %s MHz (%s) %s°C" % (processor, cpu_speed, ngettext("%d core", "%d cores", cpu_count) % cpu_count, temperature)
+			return "%s %s MHz (%s) %s\xb0C" % (processor, cpu_speed, ngettext("%d core", "%d cores", cpu_count) % cpu_count, temperature)
 		return "%s %s MHz (%s)" % (processor, cpu_speed, ngettext("%d core", "%d cores", cpu_count) % cpu_count)
 	except:
 		return _("undefined")
@@ -147,7 +150,6 @@ def getDriverInstalledDate():
 						return _("unknown")
 	except:
 		return _("unknown")
-
 def getPythonVersionString():
 	try:
 		import commands
@@ -184,6 +186,24 @@ def GetIPsFromNetworkInterfaces():
 			iface_addr = socket.inet_ntoa(namestr[i+20:i+24])
 			ifaces.append((iface_name, iface_addr))
 	return ifaces
+
+def getBoxUptime():
+	try:
+		time = ''
+		f = open("/proc/uptime", "rb")
+		secs = int(f.readline().split('.')[0])
+		f.close()
+		if secs > 86400:
+			days = secs / 86400
+			secs = secs % 86400
+			time = ngettext("%d day","%d days", days) % days + " "
+		h = secs / 3600
+		m = (secs % 3600) / 60
+		time += ngettext("%d hour", "%d hours", h) % h + " "
+		time += ngettext("%d minute", "%d minutes", m) % m
+		return  "%s" % time
+	except:
+		return '-'
 
 # For modules that do "from About import about"
 about = sys.modules[__name__]
