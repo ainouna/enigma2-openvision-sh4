@@ -279,33 +279,33 @@ void * start_loop (void *arg)
 	evfd vfd;
 	blocked = true;
 	#if defined ENABLE_SPARK7162
-		char str[] = "SPARK7162 ENIGMA2";
+		char str[] = "OPENVISION 7.7";
 	#elif defined ENABLE_SPARK
-		char str[] = "SPARK ENIGMA2";
+		char str[] = "OPENVISION 7.7";
 	#elif defined ENABLE_FORTIS_HDBOX
-		char str[] = "FS9000/9200 Enigma2";
+		char str[] = "OPENVISION 7.7";
 	#elif defined ENABLE_OCTAGON1008
-		char str[] = "HS9510 Enigma2";
+		char str[] = "OPENVISION 7.7";
 	#elif defined ENABLE_ATEVIO7500
-		char str[] = "HS8200 Enigma2";
+		char str[] = "OPENVISION 7.7";
 	#elif defined ENABLE_HS7119
-		char str[] = "7119 Enigma2";
+		char str[] = "OPENVISION 7.7";
 	#elif defined ENABLE_HS7420
-		char str[] = "HS7420 Enigma2";
+		char str[] = "OPENVISION 7.7";
 	#elif defined ENABLE_HS7810A
-		char str[] = "7810 Enigma2";
+		char str[] = "OPENVISION 7.7";
 	#elif defined ENABLE_HS7429
-		char str[] = "HS7429 Enigma2";
+		char str[] = "OPENVISION 7.7";
 	#elif defined ENABLE_HS7819
-		char str[] = "7819 Enigma2";
+		char str[] = "OPENVISION 7.7";
 	#elif defined ENABLE_UFS910
-		char str[] = "UFS910 Enigma2";
+		char str[] = "OPENVISION 7.7";
 	#elif defined ENABLE_UFS912
-		char str[] = "UFS912 Enigma2";
+		char str[] = "OPENVISION 7.7";
 	#elif defined ENABLE_UFS913
-		char str[] = "UFS913 Enigma2";
+		char str[] = "OPENVISION 7.7";
 	#else
-		char str[] = "SH4 Enigma2";
+		char str[] = "OPENVISION 7.7";
 	#endif
 	int vfddev = open ("/dev/vfd", O_WRONLY);
 	write(vfddev, str, strlen(str));
