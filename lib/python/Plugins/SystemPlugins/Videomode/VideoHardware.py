@@ -54,7 +54,7 @@ class VideoHardware:
 	elif SystemInfo["HasComposite"]:
 		modes["RSA"] = ["576i", "PAL", "NTSC", "Multi"]
         if SystemInfo["HasYPbPr"]:
-		modes["YPbPr"] = ["720p", "1080i", "576p", "480p", "576i", "480i"]
+		modes["YPbPr"] = ["720p", "1080i", "576p", "576i"]
 	modes["Component"] = ["720p", "1080p", "1080i", "576p", "576i"]
 	modes["HDMI"] = ["720p", "1080p", "1080i", "576p", "576i"]
 	modes["HDMI-PC"] = ["PC"]
