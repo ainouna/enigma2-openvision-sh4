@@ -7,7 +7,7 @@ from enigma import eEnv
 SCOPE_TRANSPONDERDATA = 0
 SCOPE_SYSETC = 1
 SCOPE_FONTS = 2
-SCOPE_SKIN = 3
+SCOPE_SKINS= 3
 SCOPE_SKIN_IMAGE = 4
 SCOPE_USERETC = 5
 SCOPE_CONFIG = 6
@@ -19,6 +19,9 @@ SCOPE_PLAYLIST = 11
 SCOPE_CURRENT_SKIN = 12
 SCOPE_METADIR = 16
 SCOPE_CURRENT_PLUGIN = 17
+SCOPE_ACTIVE_SKIN = 18
+
+SCOPE_SKIN = SCOPE_SKINS
 
 PATH_CREATE = 0
 PATH_DONTCREATE = 1
@@ -36,7 +39,8 @@ defaultPaths = {
 		SCOPE_SKIN_IMAGE: (eEnv.resolve("${datadir}/enigma2/"), PATH_DONTCREATE),
 		SCOPE_HDD: ("/hdd/movie/", PATH_DONTCREATE),
 		SCOPE_MEDIA: ("/media/", PATH_DONTCREATE),
-		SCOPE_PLAYLIST: (eEnv.resolve("${sysconfdir}/enigma2/playlist/"), PATH_CREATE),
+		SCOPE_PLAYLIST: (eEnv.resolve("${sysconfdir}/enigma2/playlist/"), PATH_CREATE
+		SCOPE_ACTIVE_SKIN: (eEnv.resolve("${datadir}/enigma2/"), PATH_DONTCREATE),		
 
 		SCOPE_USERETC: ("", PATH_DONTCREATE), # user home directory
 
